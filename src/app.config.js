@@ -28,9 +28,7 @@ function configs($httpProvider) {
 }
 
 function runs($rootScope, PageValues) {
-    $rootScope.$on('$routeChangeStart', function() {
-        PageValues.loading = true;
-    });
+    $rootScope.$on('$routeChangeStart', function() { PageValues.loading = true; });
     $rootScope.$on('$routeChangeSuccess', function() {
         PageValues.loading = false;
     });
